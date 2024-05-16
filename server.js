@@ -26,6 +26,9 @@ const taskSchema = new mongoose.Schema({
 });
 
 const Task = mongoose.model('Task', taskSchema);
+app.get("/",cors(),(req,res)=>{
+  res.send("hello this is server");
+})
 
 // Get all tasks
 app.get('/api/tasks', async (req, res) => {
